@@ -4,11 +4,11 @@ import Country from '../Country/Country';
 const Countries = ({countriesPromise}) => {
     const countriesData = use(countriesPromise)
     const countries = countriesData.countries
-    console.log(countries);
+    // console.log(countries);
     return (
         <div>
             <h1>Total Countries: {countries.length}</h1>{
-                countries.map(country => <Country></Country>)
+                countries.map(country => <Country country={country} ></Country>)
             }
             
             
